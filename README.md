@@ -2,7 +2,7 @@
 
 collections of music api
 
-## netease
+## netease 🎵
 
 - `songs(sids, proxy)`
 - `song(sid, proxy)`
@@ -14,3 +14,13 @@ collections of music api
 - `album(id, proxy)`
 - `encAlbum(id, proxy)`
 - `artistAlbum(id, offset = 0, limit = 5, proxy)`
+
+## tencent 🐧
+
+- `songs(ids, proxy)`
+- `song(id, proxy)`
+- `songUri(id, proxy)`
+- `lyric(id, proxy)`
+- `album(id, proxy)`
+- `playlist(id, proxy)`
+- `search(keyword, type = 'song', page = 1, limit = 30, proxy)`
