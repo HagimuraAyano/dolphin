@@ -2,7 +2,7 @@
 
 collections of music api
 
-## netease 🎵
+## netease 🐷
 
 - `songs(sids, proxy)`
 - `song(sid, proxy)`
@@ -24,3 +24,19 @@ collections of music api
 - `album(id, proxy)`
 - `playlist(id, proxy)`
 - `search(keyword, type = 'song', page = 1, limit = 30, proxy)`
+
+## migu 🎧
+
+- `songs(ids, proxy)` -- decrypted
+- `songSimple(id, proxy)` -- decrypted
+- `song(id, proxy)`
+- `lyric(id, proxy)`
+- `album(id, proxy)`
+- `playlist(id, page=1, proxy)`
+- `search(keyword, page = 1, type = 'music', proxy)`
+- `artistSong(id, page=1, proxy)`
+- `artistAlbum(id, page=1, proxy)`
+
+## xiami 🦐
+
+## baidu 🐻
