@@ -1,6 +1,7 @@
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
 const netease = require('../lib/netease/');
+
 chai.use(chaiAsPromised);
 chai.should();
 

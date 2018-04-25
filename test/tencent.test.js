@@ -3,6 +3,7 @@ const chaiAsPromised = require('chai-as-promised');
 const tencent = require('../lib/tencent');
 
 chai.use(chaiAsPromised);
+chai.should();
 
 describe('QQ音樂單元測試', function() {
     // 歌曲id
