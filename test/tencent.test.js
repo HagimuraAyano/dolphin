@@ -53,7 +53,7 @@ describe('QQ音樂單元測試', function() {
             return tencent.lyric(songid).should.eventually.to.be.a('string');
         });
         it('獲取純音樂的歌詞', function () {
-            return tencent.lyric(pureid).should.eventually.equal('[00:00:00]此歌曲为没有填词的纯音乐，请您欣赏');
+            return tencent.lyric(pureid).should.eventually.equal('');
         });
     });
 

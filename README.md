@@ -33,10 +33,19 @@ collections of music api
 - `lyric(id, proxy)`
 - `album(id, proxy)`
 - `playlist(id, page=1, proxy)`
-- `search(keyword, page = 1, type = 'music', proxy)`
+- `search(keyword, page = 1, type = 'song', proxy)`
 - `artistSong(id, page=1, proxy)`
 - `artistAlbum(id, page=1, proxy)`
 
 ## xiami 🦐
+
+- `songs(idlist, proxy)`
+- `songsByPageId(pidList, proxy)`
+- `song(id, proxy)`
+- `songUri(id, proxy)`
+- `songByPageId(pid, proxy)`
+- `lyric(id, proxy)`
+- `album(id, proxy)`
+- `playlist(id, proxy)`
 
 ## baidu 🐻
