@@ -14,6 +14,7 @@ collections of music api
 - `album(id, proxy)`
 - `encAlbum(id, proxy)`
 - `artistAlbum(id, offset = 0, limit = 5, proxy)`
+- `m3ulist(listId, base, proxy)`
 
 ## tencent 🐧
 
@@ -24,6 +25,7 @@ collections of music api
 - `album(id, proxy)`
 - `playlist(id, proxy)`
 - `search(keyword, type = 'song', page = 1, limit = 30, proxy)`
+- `m3ulist(listId, base, proxy)`
 
 ## migu 🎧
 

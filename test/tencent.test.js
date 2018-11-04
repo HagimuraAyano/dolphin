@@ -104,4 +104,10 @@ describe('QQ音樂單元測試', function() {
             lyric.list.length.should.equal(2);
         });
     });
+
+    describe('#m3u', function() {
+        it('生成m3u播放列表', function() {
+            tencent.m3u(playlistid).should.be.fulfilled;
+        });
+    });
 });

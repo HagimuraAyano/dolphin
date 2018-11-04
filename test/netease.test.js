@@ -115,4 +115,10 @@ describe('網易雲音樂單元測試', function() {
             result.userprofiles.length.should.equal(2);
         });
     });
+    
+    describe('#m3u', function() {
+        it('生成m3u播放列表', function() {
+            netease.m3u(playListId).should.be.fulfilled;
+        });
+    });
 });
