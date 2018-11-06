@@ -29,12 +29,12 @@ collections of music api
 
 ## migu 🎧
 
-- `songs(ids, proxy)` -- decrypted
-- `songSimple(id, proxy)` -- decrypted
 - `song(id, proxy)`
+- `songUri(id, proxy)`
 - `lyric(id, proxy)`
 - `album(id, proxy)`
 - `playlist(id, page=1, proxy)`
+- `m3u(listId, base, proxy)`
 - `search(keyword, page = 1, type = 'song', proxy)`
 - `artistSong(id, page=1, proxy)`
 - `artistAlbum(id, page=1, proxy)`

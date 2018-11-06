@@ -6,8 +6,8 @@ chai.use(chaiAsPromised);
 chai.should();
 
 describe('migu音樂單元測試', function() {
-    //song -- 不欠我什么
-    const songid = '1107491166';
+    //song -- 驗傷
+    const songid = '6005750YPNB';
     const retry = 10;
     // album -- 衛蘭
     const album = {
@@ -16,12 +16,12 @@ describe('migu音樂單元測試', function() {
         total: 1,
         more: false
     };
-    // playlist
+    // playlist -- 从组合单飞后，他们各自辉煌
     const playlist = {
-        id: '133565163/04be02dd-171e-427f-8627-4b0321915cab',
+        id: '133565163',
         songCount: 30,
-        total: 2,
-        more: true
+        total: 1,
+        more: false
     };
     // search
     const search = {
@@ -40,10 +40,17 @@ describe('migu音樂單元測試', function() {
 
     describe('#song()', function () {
         this.retries(retry);
-        it('獲取單曲信息', async function () {
-            return migu.song(songid).should.eventually.have.any.keys(['musicName', 'dynamicLyric', 'albumName']);
+        it('獲取單曲信息', function () {
+            return migu.song(songid).should.eventually.have.any.keys(['songId', 'copyrightId', 'walkmanInfo']);
         });
     });
+
+    describe('#songUri()', function() {
+        this.retries(retry);
+        it('獲取單曲鏈接', function() {
+            return migu.songUri(songid).should.eventually.to.be.a('string');
+        });
+    })
 
     describe('#lyric()', function () {
         this.retries(retry);
@@ -67,6 +74,13 @@ describe('migu音樂單元測試', function() {
             return migu.playlist(playlist.id).should.eventually.satisfy(function(pl) {
                 return pl.songs.length === playlist.songCount && pl.total === playlist.total && pl.more === playlist.more;
             });
+        });
+    });
+
+    describe('#m3u()', function() {
+        this.retries(retry);
+        it('獲取播放列表信息', function() {
+            return migu.m3u('http://127.0.0.1', playlist.id).should.eventually.to.be.a('string');
         });
     });
 
