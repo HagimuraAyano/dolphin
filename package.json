@@ -1,6 +1,6 @@
 {
   "name": "dolphin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "music api collection",
   "main": "index.js",
   "private": true,

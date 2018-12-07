@@ -37,10 +37,10 @@ describe('網易雲音樂單元測試', function() {
     });
     describe('#lyric()', function () {
         it('获取纯音乐的歌词', function () {
-            return netease.lyric(pureid).should.eventually.have.all.keys(['nolyric', 'qfy', 'sfy', 'sgc']);
+            return netease.lyric(pureid).should.eventually.equal('');
         });
         it('獲取歌曲的歌詞', function () {
-            return netease.lyric(songid).should.eventually.have.all.keys(['qfy', 'sfy', 'sgc', 'lrc', 'tlyric']);
+            return netease.lyric(songid).should.eventually.to.be.a('string');
         })
     });
     describe('#playlist()', function() {
