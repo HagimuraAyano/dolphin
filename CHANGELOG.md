@@ -23,3 +23,9 @@
 
 1. 修正 `#xiami.lyric` 在請求無歌詞音樂歌詞時產生的錯誤
 2. 調整 `#netease.lyric` 請求歌詞時返回的結果, 將 json 調整爲文件
+
+## v1.0.4
+
+1. netease 請求部分使用 https(非 https 請求 netease 大概率不響應)
+2. netease 請求部分加上超時限制
+3. 刪除 netease 加密部分的冗餘代碼
